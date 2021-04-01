@@ -1,10 +1,19 @@
 import { View, Text } from "react-native";
 import React from "react";
+import DishList from "../components/DishList";
+import {
+  RestaurantDetailsNavigationProp,
+  RestaurantDetailsScreenRouteProp,
+} from "../types/NavigationTypes";
+interface IProps {
+  route: RestaurantDetailsScreenRouteProp;
+  navigation: RestaurantDetailsNavigationProp;
+}
 
-const RestaurantDetailsScreen = () => {
+const RestaurantDetailsScreen = ({ route, navigation }: IProps) => {
   return (
     <View>
-      <Text>Tu będą dania</Text>
+      <DishList restaurant_id={route.params.restaurant_id} />
     </View>
   );
 };

@@ -38,7 +38,6 @@ const Results = (props: IProps) => {
         </View>
       ) : (
         restaurants.map((restaurant) => {
-          console.log(restaurant);
           return (
             <Restaurant
               key={restaurant.id}

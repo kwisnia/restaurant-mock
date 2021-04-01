@@ -16,9 +16,10 @@ export interface Restaurant {
 }
 
 export interface Dish {
-  dish_id: number;
+  id: number;
   restaurant_id: number;
   dish_type: string;
-  picture_url: string;
+  picture: string;
   cost: number;
+  name: string;
 }

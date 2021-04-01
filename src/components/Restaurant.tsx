@@ -11,9 +11,10 @@ const Restaurant = (props: IProps) => {
   const { navigation } = props;
   return (
     <TouchableOpacity
-      onPress={() =>
-        navigation.navigate("RestaurantDetails", { restaurant_id: id })
-      }
+      onPress={() => {
+        console.log(id);
+        navigation.navigate("RestaurantDetails", { restaurant_id: id });
+      }}
       style={styles.restaurantCard}
     >
       <Image source={{ uri: logo }} style={{ width: 50, height: 50 }} />

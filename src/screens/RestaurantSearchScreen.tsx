@@ -20,10 +20,18 @@ const RestaurantSearchScreen = (props: IProps) => {
     setRestaurants(res.data);
   }
 
-  useEffect(() => console.log(restaurants), [restaurants]);
+  React.useEffect(() => {
+    navigation.setOptions({
+      headerStyle: {
+        backgroundColor: "orange",
+      },
+      headerTitle: () => {
+        return <SearchBar searchHandler={requestRestaurants} />;
+      },
+    });
+  }, []);
   return (
     <View style={styles.container}>
-      <SearchBar searchHandler={requestRestaurants} />
       <Results restaurants={restaurants} navigation={navigation} />
     </View>
   );
@@ -33,8 +41,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // alignItems: "center",
-    // justifyContent: "center",
   },
 });
 
