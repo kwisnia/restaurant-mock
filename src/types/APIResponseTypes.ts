@@ -7,12 +7,12 @@ export type Cuisine =
   | "";
 
 export interface Restaurant {
-  restaurant_id: number;
-  restaurant_name: string;
-  restaurant_address: string;
-  restaurant_cuisine_type: Cuisine;
+  id: number;
+  name: string;
+  address: string;
+  cuisine_type: Cuisine;
   delivery_fee: number;
-  logo_url: string;
+  logo: string;
 }
 
 export interface Dish {
@@ -20,5 +20,5 @@ export interface Dish {
   restaurant_id: number;
   dish_type: string;
   picture_url: string;
-  cost: number,
+  cost: number;
 }
