@@ -2,15 +2,15 @@ import { View, Text } from "react-native";
 import React from "react";
 import DishList from "../components/DishList";
 import {
-  RestaurantDetailsNavigationProp,
-  RestaurantDetailsScreenRouteProp,
+  RestaurantMenuNavigationProp,
+  RestaurantMenuScreenRouteProp,
 } from "../types/NavigationTypes";
 interface IProps {
-  route: RestaurantDetailsScreenRouteProp;
-  navigation: RestaurantDetailsNavigationProp;
+  route: RestaurantMenuScreenRouteProp;
+  navigation: RestaurantMenuNavigationProp;
 }
 
-const RestaurantDetailsScreen = ({ route, navigation }: IProps) => {
+const RestaurantMenuScreen = ({ route, navigation }: IProps) => {
   return (
     <View>
       <DishList restaurant_id={route.params.restaurant_id} />
@@ -18,4 +18,4 @@ const RestaurantDetailsScreen = ({ route, navigation }: IProps) => {
   );
 };
 
-export default RestaurantDetailsScreen;
+export default RestaurantMenuScreen;

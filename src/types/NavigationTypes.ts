@@ -3,7 +3,7 @@ import { RouteProp } from "@react-navigation/native";
 
 export type RootStackParamList = {
   RestaurantList: undefined;
-  RestaurantDetails: { restaurant_id: number };
+  RestaurantMenu: { restaurant_id: number };
 };
 
 export type RestaurantListNavigationProp = StackNavigationProp<
@@ -11,12 +11,12 @@ export type RestaurantListNavigationProp = StackNavigationProp<
   "RestaurantList"
 >;
 
-export type RestaurantDetailsNavigationProp = StackNavigationProp<
+export type RestaurantMenuNavigationProp = StackNavigationProp<
   RootStackParamList,
-  "RestaurantDetails"
+  "RestaurantMenu"
 >;
 
-export type RestaurantDetailsScreenRouteProp = RouteProp<
+export type RestaurantMenuScreenRouteProp = RouteProp<
   RootStackParamList,
-  "RestaurantDetails"
+  "RestaurantMenu"
 >;

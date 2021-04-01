@@ -1,17 +1,18 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ViewStyle } from "react-native";
 interface IProps {
   name: string;
   type: string;
   cost: number;
+  style?: ViewStyle;
 }
 const DishInfo = (props: IProps) => {
   const { name, type, cost } = props;
   return (
-    <View>
+    <View style={props.style}>
       <Text style={styles.title}>{name}</Text>
       <Text style={styles.subtitle}>{type}</Text>
-      <Text style={styles.price}>{cost}</Text>
+      <Text style={styles.price}>{cost} zł</Text>
     </View>
   );
 };

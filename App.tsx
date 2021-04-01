@@ -4,7 +4,7 @@ import RestaurantSearchScreen from "./src/screens/RestaurantSearchScreen";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import RestaurantDetailsScreen from "./src/screens/RestaurantDetailsScreen";
+import RestaurantMenuScreen from "./src/screens/RestaurantMenuScreen";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -17,8 +17,8 @@ export default function App() {
           component={RestaurantSearchScreen}
         />
         <Stack.Screen
-          name="RestaurantDetails"
-          component={RestaurantDetailsScreen}
+          name="RestaurantMenu"
+          component={RestaurantMenuScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -15,7 +15,7 @@ const RestaurantSearchScreen = (props: IProps) => {
 
   async function requestRestaurants(address: string) {
     const res = await axios.get(
-      `http://127.0.0.1:8000/restaurants?address=${address}`
+      `http://localhost:8000/restaurants?address=${address}`
     );
     setRestaurants(res.data);
   }
